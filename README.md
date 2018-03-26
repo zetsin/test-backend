@@ -34,8 +34,12 @@ npm test
 4. 监听服务器的 StageX.stage 的消息；
 5. 控制界面 UI 显示和隐藏
 
-### 3. A 程序
+### 3. A 模拟程序
 > DIR /tests/test
+
+A 模拟程序，实现以下功能
+1. 监听来自服务器的三个消息，start、stop、forward
+2. 定时向客户端发送新的 stage
 
 ## 存在问题
 
