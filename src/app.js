@@ -36,8 +36,9 @@ clients
   })
 
   // 处理文件上传，目前仅仅是将所有文件保存在 /data 目录
-  socket.on('upload', (data, mimetype, opts) => {
-    fs.writeFile(__dirname + `/../data/${opts.email + '-' || ''}${Math.random()}.${mimetype}`, data, (e) => {
+  socket.on('upload', (data, mimetype, opts = {}) => {
+    const filename = `${opts.email || ''}${Math.random()}.${mimetype}`
+    fs.writeFile(__dirname + `/../data/${filename}`, data, (e) => {
       console.log(e)
     })
   })

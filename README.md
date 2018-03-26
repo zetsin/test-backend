@@ -3,7 +3,7 @@
 ## 如何开始
 1. 使用 npm 进行初始化:
 ```javascript
-npm init
+npm install
 ```
 2. 启动服务器
 ```javascript
