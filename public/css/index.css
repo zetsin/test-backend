@@ -1,0 +1,121 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+/* main */
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 25px;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.form-control {
+  padding: .375rem .75rem;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+.btn {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+}
+
+/* media */
+#canvas {
+  display: none;
+}
+#video {
+  width: 100%;
+}
+
+/* stages */
+
+.stage1 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1.25rem;
+  color: forestgreen;
+}
+
+.stage2 {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 1.25rem;
+  color: orangered;
+}
+
+.stage3 {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem;
+  background: dodgerblue;
+  color: white;
+}
+
+.stage4 {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.25rem;
+  color: orangered;
+  animation: move 2s infinite alternate;
+}
+
+.stage4 .triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 50px solid transparent; 
+  border-right: 50px solid transparent; 
+  border-bottom: 100px solid white;
+  z-index: -1;
+}
+.stage4 h1 {
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes move
+{
+  from {
+    right: 0px;
+  }
+  to {
+    right: 100px;
+  }
+}
